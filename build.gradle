@@ -20,11 +20,10 @@ repositories {
     }
 }
 
-sourceCompatibility = 17
-targetCompatibility = 17
+
 
 group "io.kestra.plugin"
-description 'Plugin template for Kestra'
+description 'Utilize Datastax Astra in Kestra workflows for data management.'
 
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
@@ -55,6 +54,9 @@ dependencies {
 
     // libs included in the final jar
     api group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+    // https://mvnrepository.com/artifact/com.datastax.oss/java-driver-core
+    implementation 'com.datastax.oss:java-driver-core:4.13.0'
+
 }
 
 
@@ -121,8 +123,8 @@ jar {
 pom {
     developers {
         developer {
-            id "tchiotludo"
-            name "Ludovic Dehon"
+            id "MayurChoubey"
+            name "Mayur Choubey"
         }
     }
 }
